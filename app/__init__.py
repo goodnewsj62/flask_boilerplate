@@ -26,7 +26,7 @@ def create_app(config=Config()):
     #init dependencies
     db.init_app(app)
     login_manager.init_app(app=app)
-    migrate.init_app(app=app)
+    migrate.init_app(app=app,db=db)
     mail.init_app(app=app)
 
     with app.app_context():
