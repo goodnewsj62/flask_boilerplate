@@ -13,6 +13,8 @@ login_manager = LoginManager()
 migrate = Migrate()
 mail = Mail()
 
+# dont forget to add def load_user(user_id) for flask login
+
 pwd_context = CryptContext(
     schemes=["pbkdf2_sha256", "des_crypt"],
     default="pbkdf2_sha256",
